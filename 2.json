@@ -1,0 +1,71 @@
+{
+  "inbounds": [
+    {
+      "port": 2053,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "abad8d0d-b367-4f98-af1d-7a86ee75694d",
+            "alterId": 4
+          }
+        ]
+      }
+    },
+    {
+      "port": 8443,
+      "protocol": "dokodemo-door",
+      "settings": {
+    "address": "45.141.103.90",
+    "port": 8443,
+    "network": "tcp",
+    "timeout": 300,
+    "followRedirect": false,
+    "userLevel": 0}
+    },
+    {
+      "port": 443,
+      "protocol": "dokodemo-door",
+      "settings": {
+    "address": "152.67.232.66",
+    "port": 443,
+    "network": "tcp",
+    "timeout": 300,
+    "followRedirect": false,
+    "userLevel": 0}
+    },
+    {
+      "port": 80,
+      "protocol": "dokodemo-door",
+      "settings": {
+    "address": "31.220.30.6",
+    "port": 80,
+    "network": "tcp",
+    "timeout": 300,
+    "followRedirect": false,
+    "userLevel": 0}
+    },
+    {
+      "port": 8080,
+      "protocol": "dokodemo-door",
+      "settings": {
+    "address": "45.141.103.90",
+    "port": 80,
+    "network": "tcp",
+    "timeout": 300,
+    "followRedirect": false,
+    "userLevel": 0}
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ],
+  "levels": {
+    "1": {
+      "bufferSize": 1024
+    }
+  }
+}
