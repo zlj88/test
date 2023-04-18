@@ -1,5 +1,5 @@
-
 {
+    "dns": {"servers": ["1.0.0.1", "8.8.8.8"], "queryStrategy": "UseIPv4"},
     "inbounds": [
     {
       "port": 8080,
@@ -13,6 +13,11 @@
           {
             "id": "a139ab95-47ef-5a04-84c8-01859d7077f2",
             "level": 0
+          },
+          {
+            "id": "a36f1d6f-648a-557d-942e-edc0cad0f331",
+            "level": 0,
+            "email": "bj"
           }
         ],
         "decryption": "none"
@@ -26,7 +31,42 @@
   "outbounds": [
         {
             "protocol": "freedom",
-            "settings": {}
+            "settings": {"domainStrategy": "UseIPv4"}
+        },
+      {
+      "tag": "bj",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "bj.ieee.ga",
+            "port": 2095,
+            "users": [
+              {
+                "id": "a36f1d6f-648a-557d-942e-edc0cad0f331",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/sync?ed=2048"
         }
+      }
+    }
+    ],
+    "routing":[
+    "domainStrategy": "AsIs",
+    "rules":[
+      {
+        "type": "field",
+        "user": ["bj"],
+        "outboundTag": "bj"
+      }
     ]
+  ]
 }
