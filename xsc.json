@@ -1,6 +1,5 @@
 
 {
-    "dns": {"servers": ["1.0.0.1", "8.8.8.8"], "queryStrategy": "UseIPv4"},
     "inbounds": [
     {
       "port": 8080,
@@ -27,7 +26,7 @@
   "outbounds": [
         {
             "protocol": "freedom",
-            "settings": {"domainStrategy": "UseIPv4"}
+            "settings": {}
         }
     ]
 }
