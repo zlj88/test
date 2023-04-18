@@ -59,14 +59,14 @@
       }
     }
     ],
-    "routing":[
+    "routing":{
     "domainStrategy": "AsIs",
-    "rules":[
+    "rules": [
       {
         "type": "field",
         "user": ["bj"],
         "outboundTag": "bj"
       }
     ]
-  ]
+  }
 }
