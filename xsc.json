@@ -1,5 +1,4 @@
 {
-    "dns": {"servers": ["1.0.0.1", "8.8.8.8"], "queryStrategy": "UseIPv4"},
     "inbounds": [
     {
       "port": 8080,
@@ -11,13 +10,14 @@
             "level": 0
           },
           {
-            "id": "a139ab95-47ef-5a04-84c8-01859d7077f2",
-            "level": 0
-          },
-          {
             "id": "a36f1d6f-648a-557d-942e-edc0cad0f331",
             "level": 0,
             "email": "bj"
+          },
+          {
+            "id": "fc313408-2475-5fa9-b844-cbe9392366e6",
+            "level": 0,
+            "email": "cf"
           }
         ],
         "decryption": "none"
@@ -57,6 +57,33 @@
           "path": "/sync?ed=2048"
         }
       }
+    },
+      {
+      "tag": "cf",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "v.oui.workers.dev",
+            "port": 443,
+            "users": [
+              {
+                "id": "fc313408-2475-5fa9-b844-cbe9392366e6",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/"
+        },
+        "security": "tls",
+        "tlsSettings": {"serverName": "v.oui.workers.dev"}
+      }
     }
     ],
     "routing":{
@@ -66,6 +93,11 @@
         "type": "field",
         "user": ["bj"],
         "outboundTag": "bj"
+      },
+      {
+        "type": "field",
+        "user": ["cf"],
+        "outboundTag": "cf"
       }
     ]
   }
