@@ -14,6 +14,10 @@
 				"id": "fc313408-2475-5fa9-b844-cbe9392366e6",
 				"level": 0,
 				"email": "cf"
+			}, {
+				"id": "guilin",
+				"level": 0,
+				"email": "gl"
 			}],
 			"decryption": "none"
 		},
@@ -50,6 +54,23 @@
 			}
 		}
 	}, {
+		"tag": "gl",
+		"protocol": "vless",
+		"settings": {
+			"vnext": [{
+				"address": "gl.ddns.richard.nom.za",
+				"port": 29800,
+				"users": [{
+					"id": "guilin",
+					"encryption": "none",
+					"flow": ""
+				}]
+			}]
+		},
+		"streamSettings": {
+			"network": "tcp"
+		}
+	}, {
 		"tag": "cf",
 		"protocol": "wireguard",
 		"settings": {
@@ -70,6 +91,10 @@
 			"type": "field",
 			"user": ["bj"],
 			"outboundTag": "bj"
+		},{
+			"type": "field",
+			"user": ["gl"],
+			"outboundTag": "gl"
 		}, {
 			"type": "field",
 			"user": ["cf"],
